@@ -19,6 +19,10 @@
 		1882062A26C6C104007E2244 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062826C6C104007E2244 /* BaseApiClient.swift */; };
 		1882062C26C6C113007E2244 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062B26C6C113007E2244 /* BaseRepository.swift */; };
 		1882062D26C6C113007E2244 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062B26C6C113007E2244 /* BaseRepository.swift */; };
+		18EBC52426C7786300B74808 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52326C7786300B74808 /* HTTPMethod.swift */; };
+		18EBC52526C7786300B74808 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52326C7786300B74808 /* HTTPMethod.swift */; };
+		18EBC52726C7793700B74808 /* ServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52626C7793700B74808 /* ServicesProtocol.swift */; };
+		18EBC52826C7793700B74808 /* ServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52626C7793700B74808 /* ServicesProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,8 @@
 		1882061426C6BEFE007E2244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1882062826C6C104007E2244 /* BaseApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
 		1882062B26C6C113007E2244 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		18EBC52326C7786300B74808 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		18EBC52626C7793700B74808 /* ServicesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,8 @@
 				1882062626C6C0B1007E2244 /* Services */,
 				1882062826C6C104007E2244 /* BaseApiClient.swift */,
 				1882062B26C6C113007E2244 /* BaseRepository.swift */,
+				18EBC52326C7786300B74808 /* HTTPMethod.swift */,
+				18EBC52626C7793700B74808 /* ServicesProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -362,8 +370,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EBC52726C7793700B74808 /* ServicesProtocol.swift in Sources */,
 				188205F526C6BEFC007E2244 /* ViewController.swift in Sources */,
 				188205F126C6BEFC007E2244 /* AppDelegate.swift in Sources */,
+				18EBC52426C7786300B74808 /* HTTPMethod.swift in Sources */,
 				1882062926C6C104007E2244 /* BaseApiClient.swift in Sources */,
 				1882062C26C6C113007E2244 /* BaseRepository.swift in Sources */,
 				188205F326C6BEFC007E2244 /* SceneDelegate.swift in Sources */,
@@ -374,9 +384,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EBC52526C7786300B74808 /* HTTPMethod.swift in Sources */,
 				1882062D26C6C113007E2244 /* BaseRepository.swift in Sources */,
 				1882062A26C6C104007E2244 /* BaseApiClient.swift in Sources */,
 				1882060826C6BEFE007E2244 /* RxMVVMTests.swift in Sources */,
+				18EBC52826C7793700B74808 /* ServicesProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
