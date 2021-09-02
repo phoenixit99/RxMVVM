@@ -8,7 +8,7 @@ build_project:
   stage: build
   script:
     - xcodebuild clean -project RxMVVM.xcodeproj -scheme RxMVVM | xcpretty
-    - xcodebuild test -project RxMVVM.xcodeproj -scheme RxMVVM -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' | xcpretty -s
+    - xcodebuild test -project RxMVVM.xcodeproj -scheme RxMVVM -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.5' | xcpretty -s
   tags:
     - master
 
