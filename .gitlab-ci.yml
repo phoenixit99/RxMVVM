@@ -4,11 +4,16 @@ stages:
   - archive
   - deploy
 
+before_script:
+  - gem install cocoapods
+  - pod install
+
 build_project:
   stage: build
   script:
-    - xcodebuild clean -project RxMVVM.xcworkspace -scheme RxMVVM | xcpretty
-    - xcodebuild test -project RxMVVM.xcworkspace -scheme RxMVVM -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.5' | xcpretty -s
+    - xcodebuild clean -workspace "RxMVVM.xcworkspace" -scheme "RxMVVM" | xcpretty
+    - xcodebuild test -workspace "RxMVVM.xcworkspace" -scheme "RxMVVM" -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.5' | xcpretty -s
+
   tags:
     - master
 
