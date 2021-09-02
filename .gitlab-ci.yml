@@ -10,9 +10,7 @@ build_project:
     - xcodebuild clean -project RxMVVM.xcodeproj -scheme SchemeName | xcpretty
     - xcodebuild test -project RxMVVM.xcodeproj -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' | xcpretty -s
   tags:
-    - ios_11-3
-    - xcode_12-5-1
-    - macos_11-3-1
+    - master
 
 archive_project:
   stage: archive
@@ -25,6 +23,4 @@ archive_project:
     paths:
       - build/RxMVVM.ipa
   tags:
-    - ios_11-3
-    - xcode_12-5-1
-    - macos_11-3-1
+    - stable
