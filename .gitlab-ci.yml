@@ -7,20 +7,20 @@ stages:
 build_project:
   stage: build
   script:
-    - xcodebuild clean -project RxMVVM.xcodeproj -scheme SchemeName | xcpretty
-    - xcodebuild test -project RxMVVM.xcodeproj -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' | xcpretty -s
+    - xcodebuild clean -project RxMVVM.xcodeproj -scheme RxMVVM | xcpretty
+    - xcodebuild test -project RxMVVM.xcodeproj -scheme RxMVVM -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.5' | xcpretty -s
   tags:
     - master
 
-archive_project:
-  stage: archive
-  script:
-    - xcodebuild clean archive -archivePath build/RxMVVM -scheme SchemeName
-    - xcodebuild -exportArchive -exportFormat ipa -archivePath "build/RxMVVM.xcarchive" -exportPath "build/RxMVVM.ipa" -exportProvisioningProfile "ProvisioningProfileName"
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-  artifacts:
-    paths:
-      - build/RxMVVM.ipa
-  tags:
-    - stable
+# archive_project:
+#   stage: archive
+#   script:
+#     - xcodebuild clean archive -archivePath build/RxMVVM -scheme RxMVVM
+#     - xcodebuild -exportArchive -exportFormat ipa -archivePath "build/RxMVVM.xcarchive" -exportPath "build/RxMVVM.ipa" -exportProvisioningProfile "ProvisioningProfileName"
+#   rules:
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#   artifacts:
+#     paths:
+#       - build/RxMVVM.ipa
+#   tags:
+#     - stable
