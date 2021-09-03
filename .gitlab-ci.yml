@@ -10,7 +10,6 @@ variables:
 
 before_script:
   - pod install
-  - sudo gem install bundler
   - bundle install
 
 build_project:
