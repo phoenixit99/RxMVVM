@@ -20,9 +20,6 @@ default_platform(:ios)
 platform :ios do
   desc "Test distribution "
 lane :release do
-  # Ensure that your git status is not dirty
-  ensure_git_status_clean
-  # Increment the build number (not the version number)
   # Providing the xcodeproj is optional
   increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
   # Commit the version bump
