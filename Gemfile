@@ -1,5 +1,4 @@
 source "https://rubygems.org"
 
 gem "fastlane"
-
-bundle exec fastlane release
+bundle update
