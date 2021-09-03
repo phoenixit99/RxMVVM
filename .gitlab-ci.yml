@@ -3,16 +3,21 @@ stages:
   - test
   - release
   - deploy
+  
+variables:
+  LC_ALL: "en_US.UTF-8"
+  LANG: "en_US.UTF-8"
 
 before_script:
   - pod install
+  - gem install bundler
+  - bundle install
 
 build_project:
   stage: build
   script:
     - xcodebuild clean -workspace "RxMVVM.xcworkspace" -scheme "RxMVVM" | xcpretty
     - xcodebuild test -workspace "RxMVVM.xcworkspace" -scheme "RxMVVM" -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.5' | xcpretty -s
-
   tags:
     - master
 
