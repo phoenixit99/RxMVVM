@@ -10,8 +10,8 @@ stages:
 build:
   stage: build
   script:
-    - xcodebuild clean -workspace "RxMVVM.xcodeproj" -scheme "RxMVVM" | xcpretty
-    - xcodebuild test -workspace "RxMVVM.xcodeproj" -scheme "RxMVVM" -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.5' | xcpretty -s
+    - xcodebuild clean "RxMVVM.xcodeproj" -scheme "RxMVVM" | xcpretty
+    - xcodebuild test "RxMVVM.xcodeproj" -scheme "RxMVVM" -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.5' | xcpretty -s
 
   tags:
     - master
