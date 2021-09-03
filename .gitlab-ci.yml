@@ -4,8 +4,8 @@ stages:
   - archive
   - deploy
 
-before_script:
-  - pod install
+# before_script:
+#   - pod install
 
 build:
   stage: build
