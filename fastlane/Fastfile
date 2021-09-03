@@ -23,13 +23,9 @@ lane :release do
   # Providing the xcodeproj is optional
   increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
   # Commit the version bump
+  clean_build_artifacts
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
-  # Add a git tag for this build. This will automatically
-  # use an appropriate git tag name
-  add_git_tag
-  # Push the new commit and tag back to your git remote
   push_to_git_remote
-
   sync_code_signing
   enable_automatic_code_signing(path: "RxMVVM.xcodeproj")
   build_app(scheme: "RxMVVM")
