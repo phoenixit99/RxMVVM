@@ -10,7 +10,6 @@ variables:
 
 before_script:
   - pod install
-  - bundle config set --local path 'vendor/bundle'
   - bundle install
 
 build_project:
