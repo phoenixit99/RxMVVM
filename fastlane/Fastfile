@@ -38,16 +38,14 @@ lane :release do
   # sync_code_signing
   # enable_automatic_code_signing(path: "RxMVVM.xcodeproj")
   # build_app(export_method: "ad-hoc",scheme: "RxMVVM")
-  gym(
-        scheme: "RxMVVM"
-        export_method: "ad-hoc"
-  )
+  gym(scheme: "RxMVVM",
+        export_method: "ad-hoc")
   appcenter_upload(
   api_token: "9de01f054ce092ef372fa63bc7aab84f9f0588e4",
   owner_name: "hoanguit",
   owner_type: "user", # Default is user - set to organization for appcenter organizations
   app_name: "RxSample",
-  file: "/Users/NguyenHoang/builds/5_NYDbfj/0/Nguyen_Hoang99/RxMVVM/RxMVVM.ipa",
+  file: "./RxMVVM.ipa",
   notify_testers: true # Set to false if you don't want to notify testers of your new release (default: `false`)
 )
 end
