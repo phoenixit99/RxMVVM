@@ -6,7 +6,7 @@ target 'RxMVVM' do
   use_frameworks!
 
   # Pods for RxMVVM
-  pod 'AppCenter'
+#  pod 'AppCenter'
 
   target 'RxMVVMTests' do
     inherit! :search_paths
