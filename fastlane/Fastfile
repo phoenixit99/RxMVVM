@@ -32,13 +32,11 @@ lane :release do
   add_git_tag
   # Push the new commit and tag back to your git remote
   push_to_git_remote
-end
 
-
-lane :release do
   sync_code_signing
   enable_automatic_code_signing(path: "RxMVVM.xcodeproj")
   build_app(scheme: "RxMVVM")
   hockey(api_token: "[9de01f054ce092ef372fa63bc7aab84f9f0588e4]")
+
 end
 end
