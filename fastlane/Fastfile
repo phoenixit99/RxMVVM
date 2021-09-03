@@ -1,23 +1,29 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
+# default_platform(:ios)
 #
-# For a list of all available actions, check out
+# platform :ios do
 #
-#     https://docs.fastlane.tools/actions
 #
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+# end
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+lane :release do
+  # Ensure that your git status is not dirty
+  ensure_git_status_clean
+  # Increment the build number (not the version number)
+  # Providing the xcodeproj is optional
+  increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
+  # Commit the version bump
+  commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
+  # Add a git tag for this build. This will automatically
+  # use an appropriate git tag name
+  add_git_tag
+  # Push the new commit and tag back to your git remote
+  push_to_git_remote
+end
 
-default_platform(:ios)
 
-platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
-  end
+lane :release do
+  sync_code_signing
+  enable_automatic_code_signing(path: "RxMVVM.xcodeproj")
+  build_app(scheme: "RxMVVM")
+  hockey(api_token: "[9de01f054ce092ef372fa63bc7aab84f9f0588e4]")
 end
