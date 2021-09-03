@@ -15,7 +15,10 @@
 #     }
 #   )
 # end
+default_platform(:ios)
 
+platform :ios do
+  desc "Test distribution "
 lane :release do
   # Ensure that your git status is not dirty
   ensure_git_status_clean
@@ -37,4 +40,5 @@ lane :release do
   enable_automatic_code_signing(path: "RxMVVM.xcodeproj")
   build_app(scheme: "RxMVVM")
   hockey(api_token: "[9de01f054ce092ef372fa63bc7aab84f9f0588e4]")
+end
 end
