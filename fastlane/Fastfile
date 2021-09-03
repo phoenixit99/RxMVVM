@@ -4,6 +4,17 @@
 #
 #
 # end
+# lane :beta do
+#   build_app(
+#     export_method: "app-store",
+#     export_options: {
+#       provisioningProfiles: {
+#         "com.example.bundleid" => "Provisioning Profile Name",
+#         "com.example.bundleid2" => "Provisioning Profile Name 2"
+#       }
+#     }
+#   )
+# end
 
 lane :release do
   # Ensure that your git status is not dirty
