@@ -23,7 +23,7 @@ build_project:
 release:
   stage: release
   script:
-  - fastlane release
+  - bundle exec fastlane release
   artifacts:
     paths:
       - build/RxMVVM.ipa
