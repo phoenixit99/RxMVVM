@@ -46,7 +46,7 @@ lane :deploy do
   owner_name: "hoanguit",
   owner_type: "user", # Default is user - set to organization for appcenter organizations
   app_name: "RxSample",
-  file: "./RxMVVM.ipa",
+  file: "./build/RxMVVM.ipa",
   notify_testers: true # Set to false if you don't want to notify testers of your new release (default: `false`)
 )
 end
