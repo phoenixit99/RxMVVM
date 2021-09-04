@@ -46,6 +46,7 @@ lane :release do
   # Commit the version bump
   clean_build_artifacts
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
+  git_pull()
   push_to_git_remote(
     remote: "origin",         # optional, default: "origin"
     local_branch: "HEAD",  # optional, aliased by "branch", default: "master"
