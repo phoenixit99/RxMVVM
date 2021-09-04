@@ -11,28 +11,37 @@ variables:
 build_project:
   stage: build
   script:
-    - sudo gem install bundler
-    - bundle install
-    - bundle exec fastlane build
+    # - sudo gem install bundler
+    # - bundle install
+    - bundle exec fastlane notify
   tags:
     - master
 
-release:
-  stage: release
-  script:
-  - pod install
-  - bundle exec fastlane release
-  artifacts:
-    paths:
-      - build/RxMVVM.ipa
-  tags:
-    - stable
-  only:
-     - /^release-.*$/
-     - develop
-deploy:
-  stage: deploy
-  script:
-  - bundle exec fastlane deploy
-  tags:
-    - master
+# build_project:
+#   stage: build
+#   script:
+#     - sudo gem install bundler
+#     - bundle install
+#     - bundle exec fastlane build
+#   tags:
+#     - master
+
+# release:
+#   stage: release
+#   script:
+#   - pod install
+#   - bundle exec fastlane release
+#   artifacts:
+#     paths:
+#       - build/RxMVVM.ipa
+#   tags:
+#     - stable
+#   only:
+#      - /^release-.*$/
+#      - develop
+# deploy:
+#   stage: deploy
+#   script:
+#   - bundle exec fastlane deploy
+#   tags:
+#     - master
