@@ -7,6 +7,7 @@ stages:
 variables:
   LC_ALL: "en_US.UTF-8"
   LANG: "en_US.UTF-8"
+  YOUR_PERSONAL_TOKEN: "sCYyAFR8y4x7oyKDzmWy"
 
 before_script:
     - git config --global user.name "Nguyen_Hoang99"
@@ -16,6 +17,9 @@ build_project:
   stage: build
   script:
     - bundle exec fastlane test
+    - git remote add https-origin https://gitlab-ci-token:${YOUR_PERSONAL_TOKEN}@gitlab.com/group/sub-group/project.git
+    - git tag develop
+    - git push https-origin -o ci.skip refs/tags/develop
   tags:
     - master
 
