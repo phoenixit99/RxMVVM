@@ -13,7 +13,7 @@ build_project:
   script:
     # - sudo gem install bundler
     # - bundle install
-    - bundle exec fastlane notify
+    - bundle exec fastlane telegr
   tags:
     - master
 
