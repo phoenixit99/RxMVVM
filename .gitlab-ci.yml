@@ -41,8 +41,6 @@ release:
   only:
      - triggers
      - schedules
-     - /^release-.*$/
-     - develop
      
 deploy:
   stage: deploy
