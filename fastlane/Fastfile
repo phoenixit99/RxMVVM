@@ -53,7 +53,7 @@ end
 
 
  # ------------ Sending notification  -------------
- lane :notify do
+ lane :telegr do
   telegram(
     token: '1827722164:AAFUAA_JcfqxIykng-BV83DWeuhz8geHabc', # get token from @BotFather
     chat_id: 'robertchannelbuild', # https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel
