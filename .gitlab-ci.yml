@@ -25,11 +25,9 @@ build_project:
     - bundle exec fastlane build
   tags:
     - master
-  when: manual
   only:
     - triggers
     - schedules
-    - dev
     
 release:
   stage: release
@@ -40,19 +38,15 @@ release:
       - build/RxMVVM.ipa
   tags:
     - stable
-  when: manual
   only:
      - triggers
      - schedules
-     - dev
 deploy:
   stage: deploy
   script:
   - bundle exec fastlane deploy
   tags:
     - master
-  when: manual
   only:
     - triggers
     - schedules
-    - dev
