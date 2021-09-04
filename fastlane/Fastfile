@@ -5,14 +5,13 @@ desc "Test distribution "
 
  # ------------ Build project -------------
 lane :build do
-clean_cocoapods_cache
+cocoapods()
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
 end
 
  # ------------ Archive file -------------
 lane :release do
-  cocoapods()
   # Providing the xcodeproj is optional
   increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
   # Commit the version bump
