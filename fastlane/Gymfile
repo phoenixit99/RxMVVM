@@ -9,7 +9,6 @@
 # scheme("Example")
 
 # sdk("iphoneos9.0")
-gem "cocoapods"
 clean(true)
 output_directory("./build")
 output_name("RxMVVM")
