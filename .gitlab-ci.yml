@@ -28,7 +28,8 @@ build_project:
   only:
     - triggers
     - schedules
-
+    - develop
+    
 release:
   stage: release
   script:
@@ -41,7 +42,7 @@ release:
   only:
      - triggers
      - schedules
-     
+     - develop
 deploy:
   stage: deploy
   script:
@@ -51,3 +52,4 @@ deploy:
   only:
     - triggers
     - schedules
+    - develop
