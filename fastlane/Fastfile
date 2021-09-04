@@ -1,20 +1,3 @@
-# default_platform(:ios)
-#
-# platform :ios do
-#
-#
-# end
-# lane :beta do
-#   build_app(
-#     export_method: "app-store",
-#     export_options: {
-#       provisioningProfiles: {
-#         "com.example.bundleid" => "Provisioning Profile Name",
-#         "com.example.bundleid2" => "Provisioning Profile Name 2"
-#       }
-#     }
-#   )
-# end
 default_platform(:ios)
 
 platform :ios do
@@ -25,19 +8,7 @@ lane :release do
   # Commit the version bump
   clean_build_artifacts
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
-  # push_to_git_remote(
-  #   remote: "origin",         # optional, default: "origin"
-  #   local_branch: "develop",  # optional, aliased by "branch", default is set to current branch
-  #   remote_branch: "develop", # optional, default is set to local_branch
-  #   force: true,    # optional, default: false
-  #   force_with_lease: true,   # optional, default: false
-  #   tags: false,    # optional, default: true
-  #   no_verify: true,# optional, default: false
-  #   set_upstream: true        # optional, default: false
-  # )
-  # sync_code_signing
-  # enable_automatic_code_signing(path: "RxMVVM.xcodeproj")
-  # build_app(export_method: "ad-hoc",scheme: "RxMVVM")
+  push_to_git_remote()
   gym(scheme: "RxMVVM",
         export_method: "ad-hoc")
   appcenter_upload(
