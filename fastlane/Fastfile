@@ -7,6 +7,7 @@ desc "Test distribution "
 lane :build do
 clean_cocoapods_cache
 clear_derived_data
+xcclean
 cocoapods(
   clean_install: true
 )
@@ -22,7 +23,6 @@ lane :release do
   # push_to_git_remote()
   gym(scheme: "RxMVVM",
         export_method: "ad-hoc")
-)
 end
 
  # ------------ upload fild to appcenter -------------
