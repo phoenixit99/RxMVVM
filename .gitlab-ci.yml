@@ -14,7 +14,6 @@ build_project:
     - sudo gem install bundler
     - bundle install
     - bundle exec fastlane build
-    - pod install
   tags:
     - master
 
