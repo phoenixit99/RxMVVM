@@ -15,6 +15,7 @@ before_script:
 build_project:
   stage: build
   script:
+    - git pull origin HEAD:develop --force
     - bundle exec fastlane test
   tags:
     - master
