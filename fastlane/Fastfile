@@ -5,9 +5,26 @@ desc "Test distribution "
 
  # ------------ Build project -------------
 lane :build do
-cocoapods()
+# cocoapods()
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
+
+# get_certificates(
+#    development:false,    
+#    force:false,          
+#    username: <your_apple_id>,   
+#    team_name: <your_team_name>,
+#    filename: <cert_file_name>, 
+#    output_path: <cert_output_path>
+# )        
+
+# get_provisioning_profile(
+#    adhoc: true,    
+#    app_identifier: <your_app_id>,          
+#    username: <your_apple_id>, 
+#    output_path: <cert_output_path>
+# )
+
 end
 
  # ------------ Archive file -------------
