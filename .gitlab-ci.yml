@@ -8,6 +8,10 @@ variables:
   LC_ALL: "en_US.UTF-8"
   LANG: "en_US.UTF-8"
 
+  before_script:
+    - git config --global user.name "${Nguyen_Hoang99}"
+    - git config --global user.email "${hoanguit@gmail.com}"
+
 build_project:
   stage: build
   script:
