@@ -5,7 +5,7 @@ desc "Test distribution "
 
  # ------------ Build project -------------
 lane :build do
-cocoapods()
+# cocoapods()
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
 end
