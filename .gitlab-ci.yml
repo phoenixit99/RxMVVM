@@ -22,7 +22,6 @@ build_project:
     - bundle exec fastlane test
   tags:
     - master
-
 # build_project:
 #   stage: build
 #   script:
