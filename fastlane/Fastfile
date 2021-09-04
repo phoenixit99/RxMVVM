@@ -8,6 +8,11 @@ lane :test do
   clean_build_artifacts
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
   push_to_git_remote()
+  telegram(
+  token: '1894622265:AAGoAgYoi7KJCt6ZdpU_DctZqRLrkpf97ng', # get token from @BotFather
+  chat_id: '-1001572843871',
+  text: "Hey Robert, Today is a beautiful day!. Please enjoy with new build"
+)
 end
 
 
@@ -56,7 +61,6 @@ lane :deploy do
   file: "./build/RxMVVM.ipa",
   notify_testers: true # Set to false if you don't want to notify testers of your new release (default: `false`)
 )
-
 telegram(
   token: '1894622265:AAGoAgYoi7KJCt6ZdpU_DctZqRLrkpf97ng', # get token from @BotFather
   chat_id: '-1001572843871',
