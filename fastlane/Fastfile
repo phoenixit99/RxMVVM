@@ -3,6 +3,14 @@ default_platform(:ios)
 platform :ios do
 desc "Test distribution "
 
+lane :test do
+  increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
+  clean_build_artifacts
+  commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
+  push_to_git_remote()
+end
+
+
  # ------------ Build project -------------
 lane :build do
 clear_derived_data
