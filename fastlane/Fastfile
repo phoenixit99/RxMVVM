@@ -5,7 +5,6 @@ desc "Test distribution "
 
  # ------------ Build project -------------
 lane :build do
-# cocoapods()
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
 # get_certificates(
@@ -34,7 +33,7 @@ lane :release do
   # Commit the version bump
   clean_build_artifacts
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
-  # push_to_git_remote()
+  push_to_git_remote()
   gym(scheme: "RxMVVM",
         export_method: "ad-hoc")
 end
