@@ -39,7 +39,7 @@ lane :release do
         export_method: "ad-hoc")
 end
 
- # ------------ upload fild to appcenter -------------
+ # ------------ upload file to appcenter -------------
 lane :deploy do
   appcenter_upload(
   api_token: "9de01f054ce092ef372fa63bc7aab84f9f0588e4",
@@ -50,5 +50,17 @@ lane :deploy do
   notify_testers: true # Set to false if you don't want to notify testers of your new release (default: `false`)
 )
 end
+
+
+ # ------------ Sending notification  -------------
+ lane :notify do
+  telegram(
+    token: '1827722164:AAFUAA_JcfqxIykng-BV83DWeuhz8geHabc', # get token from @BotFather
+    chat_id: 'robertchannelbuild', # https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel
+    text: "Hello world, It's same a beutiful day!"
+  )
+  
+end
+
 
 end
