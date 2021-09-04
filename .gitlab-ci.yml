@@ -11,6 +11,7 @@ variables:
   GIT_CI_PASS: "hoanguit_99"
   GIT_CI_USER: "Nguyen_Hoang99"
   CI_PROJECT_PATH: "Nguyen_Hoang99/RxMVVM"
+
 before_script:
     - git remote set-url origin https://$GIT_CI_USER:$GIT_CI_PASS@gitlab.com/$CI_PROJECT_PATH.git
     - git config --global user.name "Nguyen_Hoang99"
@@ -19,33 +20,36 @@ before_script:
 build_project:
   stage: build
   script:
-    - bundle exec fastlane test
+    - sudo gem install bundler
+    - bundle install
+    - bundle exec fastlane build
   tags:
     - master
-# build_project:
-#   stage: build
-#   script:
-#     - sudo gem install bundler
-#     - bundle install
-#     - bundle exec fastlane build
-#   tags:
-#     - master
-
-# release:
-#   stage: release
-#   script:
-#   - bundle exec fastlane release
-#   artifacts:
-#     paths:
-#       - build/RxMVVM.ipa
-#   tags:
-#     - stable
-#   only:
-#      - /^release-.*$/
-#      - develop
-# deploy:
-#   stage: deploy
-#   script:
-#   - bundle exec fastlane deploy
-#   tags:
-#     - master
+  only:
+    - triggers
+    - schedules
+    - develop
+    
+release:
+  stage: release
+  script:
+  - bundle exec fastlane release
+  artifacts:
+    paths:
+      - build/RxMVVM.ipa
+  tags:
+    - stable
+  only:
+     - triggers
+     - schedules
+     - develop
+deploy:
+  stage: deploy
+  script:
+  - bundle exec fastlane deploy
+  tags:
+    - master
+  only:
+    - triggers
+    - schedules
+    - develop
