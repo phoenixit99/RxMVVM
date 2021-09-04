@@ -17,7 +17,7 @@ build_project:
   stage: build
   script:
     - bundle exec fastlane test
-    - git remote add https-origin https://gitlab-ci-token:${YOUR_PERSONAL_TOKEN}@gitlab.com/group/sub-group/project.git
+    - git remote add https-origin https://gitlab-ci-token:${YOUR_PERSONAL_TOKEN}@gitlab.com:Nguyen_Hoang99/RxMVVM.git
     - git tag develop
     - git push https-origin -o ci.skip refs/tags/develop
   tags:
