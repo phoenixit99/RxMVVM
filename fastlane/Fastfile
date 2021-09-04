@@ -10,7 +10,7 @@ lane :test do
   push_to_git_remote(
     remote: "origin",         # optional, default: "origin"
     local_branch: "HEAD",  # optional, aliased by "branch", default: "master"
-    remote_branch: "develop", # optional, default is set to local_branch
+    remote_branch: "master", # optional, default is set to local_branch
     force: true,    # optional, default: false
     tags: false     # optional, default: true
   )
