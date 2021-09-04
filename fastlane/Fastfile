@@ -8,7 +8,6 @@ lane :build do
 # cocoapods()
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
-
 # get_certificates(
 #    development:false,    
 #    force:false,          
@@ -34,7 +33,7 @@ lane :release do
   # Commit the version bump
   clean_build_artifacts
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
-  # push_to_git_remote()
+  push_to_git_remote()
   gym(scheme: "RxMVVM",
         export_method: "ad-hoc")
 end
@@ -55,8 +54,8 @@ end
  lane :telegr do
   telegram(
     token: '1894622265:AAGoAgYoi7KJCt6ZdpU_DctZqRLrkpf97ng', # get token from @BotFather
-    chat_id: '-1001572843871', # https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel
-    text: "Hello world, It's same a beutiful day!"
+    chat_id: '-1001572843871',
+    text: "Hey Robert, Today is a beautiful day!. Please enjoy with new build"
   )
   
 end
@@ -64,8 +63,8 @@ end
 error do |ex|
   telegram(
     token: '1894622265:AAGoAgYoi7KJCt6ZdpU_DctZqRLrkpf97ng', # get token from @BotFather
-    chat_id: '-1001572843871', # https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel
-    text: "Hello world, It's same a beutiful day!"
+    chat_id: '-1001572843871', 
+    text: "He Robert. Are you busy ? Please fix build now"
   )
 end
 
