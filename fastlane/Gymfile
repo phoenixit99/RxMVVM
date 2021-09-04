@@ -9,6 +9,6 @@
 # scheme("Example")
 
 # sdk("iphoneos9.0")
-# clean(true)
-# output_directory("./build")
-# output_name("RxMVVM")
+clean(true)
+output_directory("./build")
+output_name("RxMVVM")
