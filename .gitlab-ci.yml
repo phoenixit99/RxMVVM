@@ -8,14 +8,11 @@ variables:
   LC_ALL: "en_US.UTF-8"
   LANG: "en_US.UTF-8"
 
-before_script:
-  - pod install
-  - sudo gem install bundler
-  - bundle install
- 
 build_project:
   stage: build
   script:
+    - sudo gem install bundler
+    - bundle install
     - bundle exec fastlane build
   tags:
     - master
@@ -23,6 +20,7 @@ build_project:
 release:
   stage: release
   script:
+  - pod install
   - bundle exec fastlane release
   artifacts:
     paths:
