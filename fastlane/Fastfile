@@ -51,16 +51,22 @@ lane :deploy do
 )
 end
 
-
  # ------------ Sending notification  -------------
  lane :telegr do
   telegram(
-    token: '1827722164:AAFUAA_JcfqxIykng-BV83DWeuhz8geHabc', # get token from @BotFather
-    chat_id: 'robertchannelbuild', # https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel
+    token: '1894622265:AAGoAgYoi7KJCt6ZdpU_DctZqRLrkpf97ng', # get token from @BotFather
+    chat_id: '-1001572843871', # https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel
     text: "Hello world, It's same a beutiful day!"
   )
   
 end
 
+error do |ex|
+  telegram(
+    token: '1894622265:AAGoAgYoi7KJCt6ZdpU_DctZqRLrkpf97ng', # get token from @BotFather
+    chat_id: '-1001572843871', # https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel
+    text: "Hello world, It's same a beutiful day!"
+  )
+end
 
 end
