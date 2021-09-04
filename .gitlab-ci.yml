@@ -13,7 +13,6 @@ build_project:
   script:
     - sudo gem install bundler
     - bundle install
-    - pod install
     - bundle exec fastlane build
   tags:
     - master
@@ -21,6 +20,7 @@ build_project:
 release:
   stage: release
   script:
+  - pod install
   - bundle exec fastlane release
   artifacts:
     paths:
