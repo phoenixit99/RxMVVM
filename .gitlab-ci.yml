@@ -30,6 +30,7 @@ build_project:
     
 release:
   stage: release
+  needs: [build_project]
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
   script:
@@ -42,6 +43,7 @@ release:
 
 deploy:
   stage: deploy
+  needs: [release]
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
   script:
