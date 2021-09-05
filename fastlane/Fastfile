@@ -6,7 +6,15 @@ lane :test do
   increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
   clean_build_artifacts
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
-  git_pull(rebase: true)
+
+  current_branch = git_branch
+  if !options[:remote_branch].nil? && options[:remote_branch] != current_branch
+    puts "Checkout new branch #{options[:remote_branch]}"
+    sh "git checkout " + options[:remote_branch]
+  else
+    sh "git pull origin " + options[:remote_branch] 
+  end
+
   push_to_git_remote(
     remote: "origin",         # optional, default: "origin"
     local_branch: "HEAD",  # optional, aliased by "branch", default: "master"
