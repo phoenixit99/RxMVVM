@@ -8,12 +8,7 @@ lane :test do |options|
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
 
   current_branch = git_branch
-  if !options[:remote_branch].nil? && options[:remote_branch] != current_branch
-    puts "Checkout new branch #{options[:remote_branch]}"
-    sh "git checkout " + options[:remote_branch]
-  else
-    sh "git pull origin " + options[:remote_branch] 
-  end
+  sh "git pull origin " + current_branch
 
   push_to_git_remote(
     remote: "origin",         # optional, default: "origin"
