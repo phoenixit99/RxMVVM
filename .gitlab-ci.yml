@@ -19,6 +19,8 @@ before_script:
 
 build_project:
   stage: build
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
   script:
     - sudo gem install bundler
     - bundle install
@@ -29,10 +31,11 @@ build_project:
   only:
     - triggers
     - schedules
-    - dev
     
 release:
   stage: release
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
   script:
   - bundle exec fastlane release
   artifacts:
@@ -44,9 +47,11 @@ release:
   only:
      - triggers
      - schedules
-     - dev
+
 deploy:
   stage: deploy
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
   script:
   - bundle exec fastlane deploy
   tags:
@@ -55,4 +60,3 @@ deploy:
   only:
     - triggers
     - schedules
-    - dev
