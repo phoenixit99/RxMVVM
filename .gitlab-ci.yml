@@ -13,7 +13,8 @@ variables:
   CI_PROJECT_PATH: "Nguyen_Hoang99/RxMVVM"
 
 before_script:
-    - git remote set-url origin https://$GIT_CI_USER:$GIT_CI_PASS@gitlab.com/$CI_PROJECT_PATH.git
+    # - git remote set-url origin https://$GIT_CI_USER:$GIT_CI_PASS@gitlab.com/$CI_PROJECT_PATH.git
+    - git remote set-url origin https://gitlab-ci-token:${YOUR_PERSONAL_TOKEN}@gitlab.com/$CI_PROJECT_PATH.git
     - git config --global user.name "Nguyen_Hoang99"
     - git config --global user.email "hoanguit@gmail.com"
 
