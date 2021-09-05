@@ -22,40 +22,29 @@ build_project:
   script:
     - sudo gem install bundler
     - bundle install
-    - bundle exec fastlane test
+    - bundle exec fastlane build
   tags:
     - master
-
-# build_project:
-#   stage: build
-#   rules:
-#     - if: $CI_PIPELINE_SOURCE == "schedule"
-#   script:
-#     - sudo gem install bundler
-#     - bundle install
-#     - bundle exec fastlane build
-#   tags:
-#     - master
     
-# release:
-#   stage: release
-#   needs: [build_project]
-#   rules:
-#     - if: $CI_PIPELINE_SOURCE == "schedule"
-#   script:
-#   - bundle exec fastlane release
-#   artifacts:
-#     paths:
-#       - build/RxMVVM.ipa
-#   tags:
-#     - stable
+release:
+  stage: release
+  needs: [build_project]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+  - bundle exec fastlane release
+  artifacts:
+    paths:
+      - build/RxMVVM.ipa
+  tags:
+    - stable
 
-# deploy:
-#   stage: deploy
-#   needs: [release]
-#   rules:
-#     - if: $CI_PIPELINE_SOURCE == "schedule"
-#   script:
-#   - bundle exec fastlane deploy
-#   tags:
-#     - master
+deploy:
+  stage: deploy
+  needs: [release]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+  - bundle exec fastlane deploy
+  tags:
+    - master
