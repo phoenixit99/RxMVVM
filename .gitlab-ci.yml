@@ -7,14 +7,11 @@ stages:
 variables:
   LC_ALL: "en_US.UTF-8"
   LANG: "en_US.UTF-8"
-  YOUR_PERSONAL_TOKEN: "sCYyAFR8y4x7oyKDzmWy"
-  GIT_CI_PASS: "hoanguit_99"
-  GIT_CI_USER: "Nguyen_Hoang99"
+  PERSONAL_TOKEN: "sCYyAFR8y4x7oyKDzmWy"
   CI_PROJECT_PATH: "Nguyen_Hoang99/RxMVVM"
 
 before_script:
-    # - git remote set-url origin https://$GIT_CI_USER:$GIT_CI_PASS@gitlab.com/$CI_PROJECT_PATH.git
-    - git remote set-url origin https://gitlab-ci-token:${YOUR_PERSONAL_TOKEN}@gitlab.com/$CI_PROJECT_PATH.git
+    - git remote set-url origin https://gitlab-ci-token:${PERSONAL_TOKEN}@gitlab.com/$CI_PROJECT_PATH.git
     - git config --global user.name "Nguyen_Hoang99"
     - git config --global user.email "hoanguit@gmail.com"
 
@@ -25,29 +22,40 @@ build_project:
   script:
     - sudo gem install bundler
     - bundle install
-    - bundle exec fastlane build
+    - bundle exec fastlane test
   tags:
     - master
-    
-release:
-  stage: release
-  needs: [build_project]
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule"
-  script:
-  - bundle exec fastlane release
-  artifacts:
-    paths:
-      - build/RxMVVM.ipa
-  tags:
-    - stable
 
-deploy:
-  stage: deploy
-  needs: [release]
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule"
-  script:
-  - bundle exec fastlane deploy
-  tags:
-    - master
+# build_project:
+#   stage: build
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "schedule"
+#   script:
+#     - sudo gem install bundler
+#     - bundle install
+#     - bundle exec fastlane build
+#   tags:
+#     - master
+    
+# release:
+#   stage: release
+#   needs: [build_project]
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "schedule"
+#   script:
+#   - bundle exec fastlane release
+#   artifacts:
+#     paths:
+#       - build/RxMVVM.ipa
+#   tags:
+#     - stable
+
+# deploy:
+#   stage: deploy
+#   needs: [release]
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "schedule"
+#   script:
+#   - bundle exec fastlane deploy
+#   tags:
+#     - master

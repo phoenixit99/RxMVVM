@@ -2,18 +2,19 @@ default_platform(:ios)
 
 platform :ios do
 desc "Test distribution "
-# lane :test do
-#   increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
-#   clean_build_artifacts
-#   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
-#   push_to_git_remote(
-#     remote: "origin",         # optional, default: "origin"
-#     local_branch: "HEAD",  # optional, aliased by "branch", default: "master"
-#     remote_branch: "dev", # optional, default is set to local_branch
-#     force: false,    # optional, default: false
-#     tags: false     # optional, default: true
-#   )
-# end
+lane :test do
+  increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
+  clean_build_artifacts
+  commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
+  git_pull(rebase: true)
+  push_to_git_remote(
+    remote: "origin",         # optional, default: "origin"
+    local_branch: "HEAD",  # optional, aliased by "branch", default: "master"
+    remote_branch: "dev", # optional, default is set to local_branch
+    force: false,    # optional, default: false
+    tags: false     # optional, default: true
+  )
+end
 
 
  # ------------ Build project -------------
@@ -47,7 +48,7 @@ lane :release do
   clean_build_artifacts
   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
   # git_branch("develop")
-  # git_pull(rebase: true)
+  git_pull(rebase: true)
   push_to_git_remote(
     remote: "origin",         # optional, default: "origin"
     local_branch: "HEAD",  # optional, aliased by "branch", default: "master"
