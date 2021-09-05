@@ -50,7 +50,7 @@ lane :release do
   sh "git pull origin " + current_branch
   # Providing the xcodeproj is optional
   new_build = increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
-  new_version = new_build + 1
+  new_version = new_build.to_i + 1 
   # Commit the version bump
   clean_build_artifacts
 
