@@ -27,7 +27,6 @@ build_project:
     - bundle exec fastlane build
   tags:
     - master
-  when: manual
     
 release:
   stage: release
@@ -40,7 +39,6 @@ release:
       - build/RxMVVM.ipa
   tags:
     - stable
-  when: manual
 
 deploy:
   stage: deploy
@@ -50,4 +48,3 @@ deploy:
   - bundle exec fastlane deploy
   tags:
     - master
-  when: manual
