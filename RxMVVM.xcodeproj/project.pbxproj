@@ -15,16 +15,20 @@
 		188205FD26C6BEFE007E2244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188205FB26C6BEFE007E2244 /* LaunchScreen.storyboard */; };
 		1882060826C6BEFE007E2244 /* RxMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882060726C6BEFE007E2244 /* RxMVVMTests.swift */; };
 		1882061326C6BEFE007E2244 /* RxMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882061226C6BEFE007E2244 /* RxMVVMUITests.swift */; };
-		1882062926C6C104007E2244 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062826C6C104007E2244 /* BaseApiClient.swift */; };
-		1882062A26C6C104007E2244 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062826C6C104007E2244 /* BaseApiClient.swift */; };
+		1882062926C6C104007E2244 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062826C6C104007E2244 /* NetworkProvider.swift */; };
+		1882062A26C6C104007E2244 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062826C6C104007E2244 /* NetworkProvider.swift */; };
 		1882062C26C6C113007E2244 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062B26C6C113007E2244 /* BaseRepository.swift */; };
 		1882062D26C6C113007E2244 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062B26C6C113007E2244 /* BaseRepository.swift */; };
 		18EBC52426C7786300B74808 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52326C7786300B74808 /* HTTPMethod.swift */; };
 		18EBC52526C7786300B74808 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52326C7786300B74808 /* HTTPMethod.swift */; };
-		18EBC52726C7793700B74808 /* ServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52626C7793700B74808 /* ServicesProtocol.swift */; };
-		18EBC52826C7793700B74808 /* ServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52626C7793700B74808 /* ServicesProtocol.swift */; };
+		18EBC52726C7793700B74808 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52626C7793700B74808 /* NetworkProtocol.swift */; };
+		18EBC52826C7793700B74808 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52626C7793700B74808 /* NetworkProtocol.swift */; };
 		5B3B0E330FD93DBF6F33A773 /* Pods_RxMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52668311747CE9DE7A4A2C4 /* Pods_RxMVVMTests.framework */; };
 		68F8D08CF1806E2F4BA0324A /* Pods_RxMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A62B90185937A083E13624 /* Pods_RxMVVM.framework */; };
+		C36CDC7426F387BF00E60711 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CDC7326F387BF00E60711 /* LoginService.swift */; };
+		C36CDC7726F39C0000E60711 /* ListUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CDC7626F39C0000E60711 /* ListUser.swift */; };
+		C3975FFD26F343030036E5E7 /* LoginUserCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3975FFC26F343030036E5E7 /* LoginUserCase.swift */; };
+		C3975FFF26F343B20036E5E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3975FFE26F343B20036E5E7 /* User.swift */; };
 		E09A2F9EBD29E946ACD9570B /* Pods_RxMVVM_RxMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E63FA87178206A76A2533D /* Pods_RxMVVM_RxMVVMUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,10 +64,10 @@
 		1882060E26C6BEFE007E2244 /* RxMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1882061226C6BEFE007E2244 /* RxMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMVVMUITests.swift; sourceTree = "<group>"; };
 		1882061426C6BEFE007E2244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1882062826C6C104007E2244 /* BaseApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
+		1882062826C6C104007E2244 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		1882062B26C6C113007E2244 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		18EBC52326C7786300B74808 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		18EBC52626C7793700B74808 /* ServicesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocol.swift; sourceTree = "<group>"; };
+		18EBC52626C7793700B74808 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		2FA2080B25300EC569153F1B /* Pods-RxMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVM/Pods-RxMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		3685D3FC770E44CEA20F96D9 /* Pods-RxMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM.release.xcconfig"; path = "Target Support Files/Pods-RxMVVM/Pods-RxMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		7B496E7364454CC08F4CE811 /* Pods-RxMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-RxMVVMTests/Pods-RxMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +75,10 @@
 		B2C5D7AF1A7352C8E10FE7A0 /* Pods-RxMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVMTests/Pods-RxMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4A62B90185937A083E13624 /* Pods_RxMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52668311747CE9DE7A4A2C4 /* Pods_RxMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36CDC7326F387BF00E60711 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		C36CDC7626F39C0000E60711 /* ListUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUser.swift; sourceTree = "<group>"; };
+		C3975FFC26F343030036E5E7 /* LoginUserCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserCase.swift; sourceTree = "<group>"; };
+		C3975FFE26F343B20036E5E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECC1B6DB77E01603E8266BBB /* Pods-RxMVVM-RxMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM-RxMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-RxMVVM-RxMVVMUITests/Pods-RxMVVM-RxMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F9E63FA87178206A76A2533D /* Pods_RxMVVM_RxMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVM_RxMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,8 +138,8 @@
 			children = (
 				C3975FF126F33B0A0036E5E7 /* Domain */,
 				1882062026C6BF6F007E2244 /* Application */,
-				C3975FF426F33B200036E5E7 /* Scence */,
 				1882062126C6BFE4007E2244 /* Networking */,
+				C3975FF426F33B200036E5E7 /* Scence */,
 				1882062426C6C01E007E2244 /* Resources */,
 				188205F426C6BEFC007E2244 /* ViewController.swift */,
 				188205F626C6BEFC007E2244 /* Main.storyboard */,
@@ -171,12 +179,11 @@
 		1882062126C6BFE4007E2244 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C3975FF826F33B8B0036E5E7 /* Respository */,
-				C3975FF726F33B850036E5E7 /* Services */,
-				1882062826C6C104007E2244 /* BaseApiClient.swift */,
+				C36CDC7226F387AC00E60711 /* Services */,
+				1882062826C6C104007E2244 /* NetworkProvider.swift */,
 				1882062B26C6C113007E2244 /* BaseRepository.swift */,
 				18EBC52326C7786300B74808 /* HTTPMethod.swift */,
-				18EBC52626C7793700B74808 /* ServicesProtocol.swift */,
+				18EBC52626C7793700B74808 /* NetworkProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -184,7 +191,7 @@
 		1882062426C6C01E007E2244 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C3975FF926F33B980036E5E7 /* Fonts */,
+				C36CDC7526F387DD00E60711 /* Fonts */,
 				188205F926C6BEFE007E2244 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -213,6 +220,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C36CDC7226F387AC00E60711 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C36CDC7326F387BF00E60711 /* LoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C36CDC7526F387DD00E60711 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C3975FF126F33B0A0036E5E7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +247,7 @@
 		C3975FF226F33B100036E5E7 /* UserCase */ = {
 			isa = PBXGroup;
 			children = (
+				C3975FFC26F343030036E5E7 /* LoginUserCase.swift */,
 			);
 			path = UserCase;
 			sourceTree = "<group>";
@@ -232,6 +255,8 @@
 		C3975FF326F33B180036E5E7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				C3975FFE26F343B20036E5E7 /* User.swift */,
+				C36CDC7626F39C0000E60711 /* ListUser.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -241,27 +266,6 @@
 			children = (
 			);
 			path = Scence;
-			sourceTree = "<group>";
-		};
-		C3975FF726F33B850036E5E7 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		C3975FF826F33B8B0036E5E7 /* Respository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Respository;
-			sourceTree = "<group>";
-		};
-		C3975FF926F33B980036E5E7 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,12 +470,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18EBC52726C7793700B74808 /* ServicesProtocol.swift in Sources */,
+				C3975FFD26F343030036E5E7 /* LoginUserCase.swift in Sources */,
+				18EBC52726C7793700B74808 /* NetworkProtocol.swift in Sources */,
 				188205F526C6BEFC007E2244 /* ViewController.swift in Sources */,
 				188205F126C6BEFC007E2244 /* AppDelegate.swift in Sources */,
+				C36CDC7726F39C0000E60711 /* ListUser.swift in Sources */,
 				18EBC52426C7786300B74808 /* HTTPMethod.swift in Sources */,
-				1882062926C6C104007E2244 /* BaseApiClient.swift in Sources */,
+				C36CDC7426F387BF00E60711 /* LoginService.swift in Sources */,
+				1882062926C6C104007E2244 /* NetworkProvider.swift in Sources */,
 				1882062C26C6C113007E2244 /* BaseRepository.swift in Sources */,
+				C3975FFF26F343B20036E5E7 /* User.swift in Sources */,
 				188205F326C6BEFC007E2244 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,9 +490,9 @@
 			files = (
 				18EBC52526C7786300B74808 /* HTTPMethod.swift in Sources */,
 				1882062D26C6C113007E2244 /* BaseRepository.swift in Sources */,
-				1882062A26C6C104007E2244 /* BaseApiClient.swift in Sources */,
+				1882062A26C6C104007E2244 /* NetworkProvider.swift in Sources */,
 				1882060826C6BEFE007E2244 /* RxMVVMTests.swift in Sources */,
-				18EBC52826C7793700B74808 /* ServicesProtocol.swift in Sources */,
+				18EBC52826C7793700B74808 /* NetworkProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

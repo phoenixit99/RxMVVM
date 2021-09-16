@@ -5,7 +5,6 @@ target 'RxMVVM' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for RxMVVM
   pod 'AppCenter'
 
   target 'RxMVVMTests' do
