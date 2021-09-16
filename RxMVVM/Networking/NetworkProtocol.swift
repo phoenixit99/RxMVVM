@@ -19,10 +19,10 @@ enum Task {
     case requestPlain
 }
 
-protocol ServicesProtocol {
+protocol NetworkProtocol {
 
     var baseUrl:String { get }
-    var path: String {get}
+    var path: String {get }
     var method: HTTPMethod { get }
     var headers: [String:Any] { get }
     var task: Task { get }
