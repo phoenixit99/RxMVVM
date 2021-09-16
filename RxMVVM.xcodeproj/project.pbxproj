@@ -128,11 +128,10 @@
 		188205EF26C6BEFC007E2244 /* RxMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C3975FF126F33B0A0036E5E7 /* Domain */,
 				1882062026C6BF6F007E2244 /* Application */,
-				1882063026C6C2FB007E2244 /* Domain */,
+				C3975FF426F33B200036E5E7 /* Scence */,
 				1882062126C6BFE4007E2244 /* Networking */,
-				1882062226C6BFEA007E2244 /* Scenes */,
-				1882062326C6BFF4007E2244 /* Common */,
 				1882062426C6C01E007E2244 /* Resources */,
 				188205F426C6BEFC007E2244 /* ViewController.swift */,
 				188205F626C6BEFC007E2244 /* Main.storyboard */,
@@ -172,8 +171,8 @@
 		1882062126C6BFE4007E2244 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				1882062726C6C0B6007E2244 /* Respository */,
-				1882062626C6C0B1007E2244 /* Services */,
+				C3975FF826F33B8B0036E5E7 /* Respository */,
+				C3975FF726F33B850036E5E7 /* Services */,
 				1882062826C6C104007E2244 /* BaseApiClient.swift */,
 				1882062B26C6C113007E2244 /* BaseRepository.swift */,
 				18EBC52326C7786300B74808 /* HTTPMethod.swift */,
@@ -182,79 +181,13 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		1882062226C6BFEA007E2244 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		1882062326C6BFF4007E2244 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				1882062F26C6C2E4007E2244 /* Extensions */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		1882062426C6C01E007E2244 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1882062526C6C068007E2244 /* Fonts */,
+				C3975FF926F33B980036E5E7 /* Fonts */,
 				188205F926C6BEFE007E2244 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		1882062526C6C068007E2244 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		1882062626C6C0B1007E2244 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		1882062726C6C0B6007E2244 /* Respository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Respository;
-			sourceTree = "<group>";
-		};
-		1882062F26C6C2E4007E2244 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		1882063026C6C2FB007E2244 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				1882063226C6C325007E2244 /* UserCases */,
-				1882063126C6C31F007E2244 /* Entities */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		1882063126C6C31F007E2244 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		1882063226C6C325007E2244 /* UserCases */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UserCases;
 			sourceTree = "<group>";
 		};
 		9F5F90EC82FE1FCC0BC35DE1 /* Pods */ = {
@@ -278,6 +211,57 @@
 				B52668311747CE9DE7A4A2C4 /* Pods_RxMVVMTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3975FF126F33B0A0036E5E7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C3975FF326F33B180036E5E7 /* Entities */,
+				C3975FF226F33B100036E5E7 /* UserCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C3975FF226F33B100036E5E7 /* UserCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserCase;
+			sourceTree = "<group>";
+		};
+		C3975FF326F33B180036E5E7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C3975FF426F33B200036E5E7 /* Scence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scence;
+			sourceTree = "<group>";
+		};
+		C3975FF726F33B850036E5E7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C3975FF826F33B8B0036E5E7 /* Respository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Respository;
+			sourceTree = "<group>";
+		};
+		C3975FF926F33B980036E5E7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
