@@ -17,18 +17,19 @@
 		1882061326C6BEFE007E2244 /* RxMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882061226C6BEFE007E2244 /* RxMVVMUITests.swift */; };
 		1882062926C6C104007E2244 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062826C6C104007E2244 /* NetworkProvider.swift */; };
 		1882062A26C6C104007E2244 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062826C6C104007E2244 /* NetworkProvider.swift */; };
-		1882062C26C6C113007E2244 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062B26C6C113007E2244 /* BaseRepository.swift */; };
-		1882062D26C6C113007E2244 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882062B26C6C113007E2244 /* BaseRepository.swift */; };
 		18EBC52426C7786300B74808 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52326C7786300B74808 /* HTTPMethod.swift */; };
 		18EBC52526C7786300B74808 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52326C7786300B74808 /* HTTPMethod.swift */; };
 		18EBC52726C7793700B74808 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52626C7793700B74808 /* NetworkProtocol.swift */; };
 		18EBC52826C7793700B74808 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBC52626C7793700B74808 /* NetworkProtocol.swift */; };
 		5B3B0E330FD93DBF6F33A773 /* Pods_RxMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52668311747CE9DE7A4A2C4 /* Pods_RxMVVMTests.framework */; };
 		68F8D08CF1806E2F4BA0324A /* Pods_RxMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A62B90185937A083E13624 /* Pods_RxMVVM.framework */; };
-		C36CDC7426F387BF00E60711 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CDC7326F387BF00E60711 /* LoginService.swift */; };
-		C36CDC7726F39C0000E60711 /* ListUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CDC7626F39C0000E60711 /* ListUser.swift */; };
-		C3975FFD26F343030036E5E7 /* LoginUserCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3975FFC26F343030036E5E7 /* LoginUserCase.swift */; };
-		C3975FFF26F343B20036E5E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3975FFE26F343B20036E5E7 /* User.swift */; };
+		C30B93D526F4962B008C2CC1 /* AuthenticationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B93D426F4962B008C2CC1 /* AuthenticationEndPoint.swift */; };
+		C36CDC7426F387BF00E60711 /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CDC7326F387BF00E60711 /* ForecastService.swift */; };
+		C3975FFD26F343030036E5E7 /* ForecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3975FFC26F343030036E5E7 /* ForecaseProtocol.swift */; };
+		C398672426F5A6A800E0DC87 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C398672326F5A6A800E0DC87 /* LocationModel.swift */; };
+		C398672626F5A80B00E0DC87 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C398672526F5A80B00E0DC87 /* WeatherModel.swift */; };
+		C398672826F5D6D100E0DC87 /* ConditionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C398672726F5D6D100E0DC87 /* ConditionModel.swift */; };
+		C398672A26F5D7AF00E0DC87 /* ForecaseWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C398672926F5D7AF00E0DC87 /* ForecaseWeather.swift */; };
 		E09A2F9EBD29E946ACD9570B /* Pods_RxMVVM_RxMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E63FA87178206A76A2533D /* Pods_RxMVVM_RxMVVMUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +66,6 @@
 		1882061226C6BEFE007E2244 /* RxMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMVVMUITests.swift; sourceTree = "<group>"; };
 		1882061426C6BEFE007E2244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1882062826C6C104007E2244 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
-		1882062B26C6C113007E2244 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		18EBC52326C7786300B74808 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		18EBC52626C7793700B74808 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		2FA2080B25300EC569153F1B /* Pods-RxMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVM/Pods-RxMVVM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,10 +75,13 @@
 		B2C5D7AF1A7352C8E10FE7A0 /* Pods-RxMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVMTests/Pods-RxMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4A62B90185937A083E13624 /* Pods_RxMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52668311747CE9DE7A4A2C4 /* Pods_RxMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C36CDC7326F387BF00E60711 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		C36CDC7626F39C0000E60711 /* ListUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUser.swift; sourceTree = "<group>"; };
-		C3975FFC26F343030036E5E7 /* LoginUserCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserCase.swift; sourceTree = "<group>"; };
-		C3975FFE26F343B20036E5E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C30B93D426F4962B008C2CC1 /* AuthenticationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEndPoint.swift; sourceTree = "<group>"; };
+		C36CDC7326F387BF00E60711 /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
+		C3975FFC26F343030036E5E7 /* ForecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecaseProtocol.swift; sourceTree = "<group>"; };
+		C398672326F5A6A800E0DC87 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		C398672526F5A80B00E0DC87 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		C398672726F5D6D100E0DC87 /* ConditionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionModel.swift; sourceTree = "<group>"; };
+		C398672926F5D7AF00E0DC87 /* ForecaseWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecaseWeather.swift; sourceTree = "<group>"; };
 		ECC1B6DB77E01603E8266BBB /* Pods-RxMVVM-RxMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM-RxMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-RxMVVM-RxMVVMUITests/Pods-RxMVVM-RxMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F9E63FA87178206A76A2533D /* Pods_RxMVVM_RxMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVM_RxMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,7 +184,6 @@
 			children = (
 				C36CDC7226F387AC00E60711 /* Services */,
 				1882062826C6C104007E2244 /* NetworkProvider.swift */,
-				1882062B26C6C113007E2244 /* BaseRepository.swift */,
 				18EBC52326C7786300B74808 /* HTTPMethod.swift */,
 				18EBC52626C7793700B74808 /* NetworkProtocol.swift */,
 			);
@@ -223,7 +225,8 @@
 		C36CDC7226F387AC00E60711 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C36CDC7326F387BF00E60711 /* LoginService.swift */,
+				C36CDC7326F387BF00E60711 /* ForecastService.swift */,
+				C30B93D426F4962B008C2CC1 /* AuthenticationEndPoint.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -247,7 +250,7 @@
 		C3975FF226F33B100036E5E7 /* UserCase */ = {
 			isa = PBXGroup;
 			children = (
-				C3975FFC26F343030036E5E7 /* LoginUserCase.swift */,
+				C3975FFC26F343030036E5E7 /* ForecaseProtocol.swift */,
 			);
 			path = UserCase;
 			sourceTree = "<group>";
@@ -255,8 +258,10 @@
 		C3975FF326F33B180036E5E7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				C3975FFE26F343B20036E5E7 /* User.swift */,
-				C36CDC7626F39C0000E60711 /* ListUser.swift */,
+				C398672326F5A6A800E0DC87 /* LocationModel.swift */,
+				C398672526F5A80B00E0DC87 /* WeatherModel.swift */,
+				C398672726F5D6D100E0DC87 /* ConditionModel.swift */,
+				C398672926F5D7AF00E0DC87 /* ForecaseWeather.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -470,17 +475,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3975FFD26F343030036E5E7 /* LoginUserCase.swift in Sources */,
+				C3975FFD26F343030036E5E7 /* ForecaseProtocol.swift in Sources */,
 				18EBC52726C7793700B74808 /* NetworkProtocol.swift in Sources */,
 				188205F526C6BEFC007E2244 /* ViewController.swift in Sources */,
+				C398672A26F5D7AF00E0DC87 /* ForecaseWeather.swift in Sources */,
+				C398672826F5D6D100E0DC87 /* ConditionModel.swift in Sources */,
 				188205F126C6BEFC007E2244 /* AppDelegate.swift in Sources */,
-				C36CDC7726F39C0000E60711 /* ListUser.swift in Sources */,
+				C398672426F5A6A800E0DC87 /* LocationModel.swift in Sources */,
+				C30B93D526F4962B008C2CC1 /* AuthenticationEndPoint.swift in Sources */,
 				18EBC52426C7786300B74808 /* HTTPMethod.swift in Sources */,
-				C36CDC7426F387BF00E60711 /* LoginService.swift in Sources */,
+				C36CDC7426F387BF00E60711 /* ForecastService.swift in Sources */,
 				1882062926C6C104007E2244 /* NetworkProvider.swift in Sources */,
-				1882062C26C6C113007E2244 /* BaseRepository.swift in Sources */,
-				C3975FFF26F343B20036E5E7 /* User.swift in Sources */,
 				188205F326C6BEFC007E2244 /* SceneDelegate.swift in Sources */,
+				C398672626F5A80B00E0DC87 /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +496,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18EBC52526C7786300B74808 /* HTTPMethod.swift in Sources */,
-				1882062D26C6C113007E2244 /* BaseRepository.swift in Sources */,
 				1882062A26C6C104007E2244 /* NetworkProvider.swift in Sources */,
 				1882060826C6BEFE007E2244 /* RxMVVMTests.swift in Sources */,
 				18EBC52826C7793700B74808 /* NetworkProtocol.swift in Sources */,

@@ -15,15 +15,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func callLogiinAction(_ sender: Any) {
-        let loginServices = LoginServices(authenType: .login)
-        loginServices.doLogin("", password: "") {[weak self] resData in
-            switch resData {
-            case .success(let user):
-                print(user.title)
-                break
-            case .failure(let error):
-                break
-            }
+  
+        ForecastService.getForecaseWeather("vietnam", day: 3) { [weak self] result  in
+            
         }
     }
     
