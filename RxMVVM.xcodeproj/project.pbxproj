@@ -24,6 +24,7 @@
 		5B3B0E330FD93DBF6F33A773 /* Pods_RxMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52668311747CE9DE7A4A2C4 /* Pods_RxMVVMTests.framework */; };
 		68F8D08CF1806E2F4BA0324A /* Pods_RxMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A62B90185937A083E13624 /* Pods_RxMVVM.framework */; };
 		C30B93D526F4962B008C2CC1 /* AuthenticationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B93D426F4962B008C2CC1 /* AuthenticationEndPoint.swift */; };
+		C3172BAE26FE1AE200EF193E /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3172BAD26FE1AE200EF193E /* NetworkEnvironment.swift */; };
 		C36CDC7426F387BF00E60711 /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CDC7326F387BF00E60711 /* ForecastService.swift */; };
 		C3975FFD26F343030036E5E7 /* ForecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3975FFC26F343030036E5E7 /* ForecaseProtocol.swift */; };
 		C398672426F5A6A800E0DC87 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C398672326F5A6A800E0DC87 /* LocationModel.swift */; };
@@ -76,6 +77,7 @@
 		B4A62B90185937A083E13624 /* Pods_RxMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52668311747CE9DE7A4A2C4 /* Pods_RxMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C30B93D426F4962B008C2CC1 /* AuthenticationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEndPoint.swift; sourceTree = "<group>"; };
+		C3172BAD26FE1AE200EF193E /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		C36CDC7326F387BF00E60711 /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		C3975FFC26F343030036E5E7 /* ForecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecaseProtocol.swift; sourceTree = "<group>"; };
 		C398672326F5A6A800E0DC87 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				1882062826C6C104007E2244 /* NetworkProvider.swift */,
 				18EBC52326C7786300B74808 /* HTTPMethod.swift */,
 				18EBC52626C7793700B74808 /* NetworkProtocol.swift */,
+				C3172BAD26FE1AE200EF193E /* NetworkEnvironment.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				C30B93D526F4962B008C2CC1 /* AuthenticationEndPoint.swift in Sources */,
 				18EBC52426C7786300B74808 /* HTTPMethod.swift in Sources */,
 				C36CDC7426F387BF00E60711 /* ForecastService.swift in Sources */,
+				C3172BAE26FE1AE200EF193E /* NetworkEnvironment.swift in Sources */,
 				1882062926C6C104007E2244 /* NetworkProvider.swift in Sources */,
 				188205F326C6BEFC007E2244 /* SceneDelegate.swift in Sources */,
 				C398672626F5A80B00E0DC87 /* WeatherModel.swift in Sources */,

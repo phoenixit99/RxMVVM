@@ -7,32 +7,15 @@
 
 import Foundation
 
-enum ApiUrl {
-    static let baseUrl = "https://weatherapi-com.p.rapidapi.com"
-}
-
-protocol NetworkRequest {
-    var urlRequest: URLRequest { get }
-}
-
-extension ForecastRequest : NetworkRequest {
-
-    var urlRequest: URLRequest {
-        return self.baseUrlRequest
-    }
-}
-
-
 protocol NetworkProvider {
-    
-    static func requestUrl<T:Decodable>(networkRequest: NetworkRequest,completion: @escaping (Result<T,Error>) -> Void)
+    static func requestUrl<T:Decodable>(networkRequest: URLRequest,completion: @escaping (Result<T,Error>) -> Void)
 }
 
 extension NetworkProvider {
-
-    static public func requestUrl<T:Decodable>(networkRequest: NetworkRequest,completion: @escaping (Result<T,Error>) -> Void) {
+    
+    static public func requestUrl<T:Decodable>(networkRequest: URLRequest,completion: @escaping (Result<T,Error>) -> Void) {
         
-        let task = URLSession.shared.dataTask(with: networkRequest.urlRequest, completionHandler: { data, response, error in
+        let task = URLSession.shared.dataTask(with: networkRequest, completionHandler: { data, response, error in
             guard let data = data else {
                 print(error?.localizedDescription ?? "")
                 return

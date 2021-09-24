@@ -61,13 +61,12 @@ extension NetworkProtocol {
         
     }
     
-    var baseUrlRequest: URLRequest {
+    var urlRequest: URLRequest {
         
         guard let url = URL(string: baseUrl + path) else { preconditionFailure("Invalid URL used to create URL instance") }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = headers
-//        request.httpBody = requestBodyFrom(params: self.parameters)
         return request
     }
 }

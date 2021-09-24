@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
     @IBAction func callLogiinAction(_ sender: Any) {
   
-        ForecastService.getForecaseWeather("vietnam", day: 3) { [weak self] result  in
+        NetworkService.getForecaseWeather("vietnam", day: 3) { [weak self] result  in
             
         }
     }

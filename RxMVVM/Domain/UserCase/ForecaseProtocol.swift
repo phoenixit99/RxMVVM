@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ForecaseProtocol : NetworkProvider {
+protocol ForecaseProtocol {
     static func getForecaseWeather(_ search: String,day: Int,completion: @escaping (Result<ForecaseWeather,Error>)->Void )
 }

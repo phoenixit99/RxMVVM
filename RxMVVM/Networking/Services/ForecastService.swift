@@ -7,13 +7,17 @@
 
 import Foundation
 
-enum ForecastService : ForecaseProtocol {
+enum NetworkService: NetworkProvider {
+    static var environment: Environment = .production
+}
 
+extension NetworkService : ForecaseProtocol {
+    
     static func getForecaseWeather(_ search: String,
                                    day: Int,
                                    completion: @escaping (Result<ForecaseWeather,Error>)->Void ) {
         
         let forestRequest =  ForecastRequest.forecastWeather(search: search, day: day)
-        requestUrl(networkRequest: forestRequest, completion: completion)
+        requestUrl(networkRequest: forestRequest.urlRequest, completion: completion)
     }
 }
