@@ -1,52 +1,24 @@
 default_platform(:ios)
 
-acGrougVN = "HCMQC"
+acGrougVN = "newone"
 acGroupAll = "owner%20project"
 
 testDest = acGroupAll
 
 platform :ios do
 desc "Test distribution "
-# lane :test do |options|
-#   increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
-#   clean_build_artifacts
-#   commit_version_bump(xcodeproj: "RxMVVM.xcodeproj")
 
-#   current_branch = git_branch
-#   sh "git pull origin " + current_branch
-
-#   push_to_git_remote(
-#     remote: "origin",         # optional, default: "origin"
-#     local_branch: "HEAD",  # optional, aliased by "branch", default: "master"
-#     remote_branch: "dev", # optional, default is set to local_branch
-#     force: false,    # optional, default: false
-#     tags: false     # optional, default: true
-#   )
-# end
-
- # ------------ Build project -------------
 lane :build do
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
-# get_certificates(
-#    development:false,    
-#    force:false,          
-#    username: <your_apple_id>,   
-#    team_name: <your_team_name>,
-#    filename: <cert_file_name>, 
-#    output_path: <cert_output_path>
-# )        
-
-# get_provisioning_profile(
-#    adhoc: true,    
-#    app_identifier: <your_app_id>,          
-#    username: <your_apple_id>, 
-#    output_path: <cert_output_path>
-# )
-
 end
 
  # ------------ Archive file -------------
+
+ private_lane :setVar do |options| 
+    testDest = (options[:qc] == true ? acGroupMir : acGroupAll)  
+  end
+
 lane :release do
   cocoapods
  
@@ -74,7 +46,9 @@ lane :release do
 end
 
  # ------------ upload file to appcenter -------------
-lane :deploy do
+lane :deploy do |options|
+  setVar(qc: options[:mirQa])
+
   appcenter_upload(
   api_token: "9de01f054ce092ef372fa63bc7aab84f9f0588e4",
   owner_name: "hoanguit",
