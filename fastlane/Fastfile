@@ -1,5 +1,10 @@
 default_platform(:ios)
 
+acGrougVN = "HCMQC"
+acGroupAll = "owner%20project"
+
+testDest = acGroupAll
+
 platform :ios do
 desc "Test distribution "
 # lane :test do |options|
@@ -77,7 +82,7 @@ lane :deploy do
   app_name: "RxSample",
   file: "./build/RxMVVM.ipa",
   notify_testers: true,
-  destinations:"owner%20project",
+  destinations:testDest,
   destination_type: "group"
 )
 telegram(
