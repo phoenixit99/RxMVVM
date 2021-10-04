@@ -77,6 +77,8 @@ lane :deploy do
   app_name: "RxSample",
   file: "./build/RxMVVM.ipa",
   notify_testers: true # Set to false if you don't want to notify testers of your new release (default: `false`)
+  destinations:"owner project"
+   destination_type: "group"
 )
 telegram(
   token: '1894622265:AAGoAgYoi7KJCt6ZdpU_DctZqRLrkpf97ng', # get token from @BotFather
