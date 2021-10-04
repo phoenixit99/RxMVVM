@@ -16,7 +16,7 @@ end
  # ------------ Archive file -------------
 
  private_lane :setVar do |options| 
-    testDest = (options[:qc] == true ? acGroupMir : acGroupAll)  
+    testDest = (options[:qc] == true ? acGroupAll : acGrougVN)  
   end
 
 lane :release do
