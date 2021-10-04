@@ -45,6 +45,6 @@ deploy:
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
   script:
-  - bundle exec fastlane deploy mirQa:yes
+  - bundle exec fastlane deploy mirQa:no
   tags:
     - master
