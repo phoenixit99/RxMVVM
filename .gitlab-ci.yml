@@ -3,6 +3,7 @@ stages:
   - test
   - release
   - deploy
+  - report
   
 variables:
   LC_ALL: "en_US.UTF-8"
@@ -45,6 +46,16 @@ deploy:
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
   script:
-  - bundle exec fastlane deploy
+  - bundle exec fastlane deploy mirQa:no
+  tags:
+    - master
+
+report:
+  stage: report
+  needs: [deploy]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+  - bundle exec fastlane report
   tags:
     - master
