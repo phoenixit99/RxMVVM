@@ -66,6 +66,17 @@ telegram(
 )
 end
 
+
+ # ------------ upload file to appcenter -------------
+ lane :report do |options|
+    xcov(
+        workspace: "RxMVVM.xcworkspace",
+        scheme: "RxMVVM",
+        output_directory: "report"
+      )
+end
+  
+
 error do |ex|
   telegram(
     token: '1894622265:AAGoAgYoi7KJCt6ZdpU_DctZqRLrkpf97ng', # get token from @BotFather
