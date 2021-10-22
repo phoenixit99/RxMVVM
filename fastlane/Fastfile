@@ -72,7 +72,8 @@ end
     xcov(
         workspace: "RxMVVM.xcworkspace",
         scheme: "RxMVVM",
-        output_directory: "report"
+        output_directory: "report",
+        include_test_targets: true
       )
 end
   
