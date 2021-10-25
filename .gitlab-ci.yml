@@ -1,7 +1,7 @@
 stages:
   - build
-  - test
   - release
+  - test
   - deploy
   - report
   
@@ -27,14 +27,6 @@ build_project:
   tags:
     - master
 
-xcodeTest:
-  stage: test
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule"
-  script: 
-    - bundle exec fastlane test
-  tags:
-    - master   
 release:
   stage: release
   needs: [build_project]
@@ -48,6 +40,15 @@ release:
   tags:
     - stable
 
+xcodeTest:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script: 
+    - bundle exec fastlane test
+  tags:
+    - master   
+    
 deploy:
   stage: deploy
   needs: [release]
