@@ -14,8 +14,6 @@ xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
 end
 
 lane :test do
-  cocoapods
-  clean_build_artifacts
   scan(
       workspace:"RxMVVM.xcworkspace",
       scheme:"RxMVVM",
