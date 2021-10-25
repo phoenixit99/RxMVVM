@@ -11,6 +11,7 @@ desc "Test distribution "
 lane :build do
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
+cocoapods
 end
 
  # ------------ Archive file -------------
@@ -20,8 +21,6 @@ end
   end
 
 lane :release do
-  cocoapods
- 
   current_branch = git_branch
 
   sh "git pull origin " + current_branch
