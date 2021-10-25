@@ -15,10 +15,11 @@ end
 
 lane :test do
 cocoapods
-scan(
-  workspace: "RxMVVM.xcworkspace",
-  devices: ["iPhone X"]
-)
+  scan(
+      scheme: 'RxMVVM', # Project scheme name
+      clean: true, # Clean project folder before test execution
+      device: 'iPhone X' # Simulator for testing 
+    )
 end
 
 
