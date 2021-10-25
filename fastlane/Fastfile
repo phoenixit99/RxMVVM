@@ -14,7 +14,10 @@ xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
 end
 
 lane :test do
-
+scan(
+  workspace: "RxMVVM.xcworkspace",
+  devices: ["iPhone X"]
+)
 end
 
 
