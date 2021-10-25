@@ -26,7 +26,14 @@ build_project:
     - bundle exec fastlane build
   tags:
     - master
-    
+
+xcodeTest:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script: xcodebuild test -scheme RxMVVM -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0'
+  tags:
+    - master   
 release:
   stage: release
   needs: [build_project]
