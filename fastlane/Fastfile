@@ -11,7 +11,6 @@ desc "Test distribution "
 lane :build do
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
-cocoapods
 end
 
 lane :test do
@@ -27,7 +26,7 @@ end
 
 lane :release do
   current_branch = git_branch
-
+  cocoapods
   sh "git pull origin " + current_branch
   # Providing the xcodeproj is optional
   new_build = increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
