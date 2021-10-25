@@ -26,6 +26,12 @@ build_project:
     - bundle exec fastlane build
   tags:
     - master
+
+xcodeTest:
+  tags:
+    - ios
+  stage: test
+  script: xcodebuild test -scheme RxMVVM -destination 'platform=iOS Simulator,name=iPhone 6s,OS=12.1'    
     
 release:
   stage: release
