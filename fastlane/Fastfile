@@ -14,6 +14,7 @@ xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
 end
 
 lane :test do
+  cocoapods
   scan(
       workspace:"RxMVVM.xcworkspace",
       scheme:"RxMVVM",
