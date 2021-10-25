@@ -62,7 +62,7 @@ deploy:
 
 report:
   stage: report
-  needs: [xcodeTest]
+  needs: [deploy]
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
   script:
