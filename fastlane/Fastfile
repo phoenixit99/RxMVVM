@@ -12,7 +12,6 @@ lane :build do
 clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
 cocoapods
-clean_build_artifacts
 
 end
 
@@ -38,6 +37,7 @@ lane :release do
   new_build = increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
   new_version = new_build.to_i + 1 
   # Commit the version bump
+  clean_build_artifacts
 
   commit_version_bump(message: "Version Bump to " + new_version.to_s,
     xcodeproj: "RxMVVM.xcodeproj")
