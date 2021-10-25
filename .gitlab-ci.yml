@@ -27,18 +27,18 @@ build_project:
   tags:
     - master
 
-release:
-  stage: release
-  needs: [build_project]
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule"
-  script:
-  - bundle exec fastlane release
-  artifacts:
-    paths:
-      - build/RxMVVM.ipa
-  tags:
-    - stable
+# release:
+#   stage: release
+#   needs: [build_project]
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "schedule"
+#   script:
+#   - bundle exec fastlane release
+#   artifacts:
+#     paths:
+#       - build/RxMVVM.ipa
+#   tags:
+#     - stable
 
 xcodeTest:
   stage: test
@@ -49,15 +49,15 @@ xcodeTest:
   tags:
     - master   
     
-deploy:
-  stage: deploy
-  needs: [release]
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule"
-  script:
-  - bundle exec fastlane deploy mirQa:no
-  tags:
-    - master
+# deploy:
+#   stage: deploy
+#   needs: [release]
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "schedule"
+#   script:
+#   - bundle exec fastlane deploy mirQa:no
+#   tags:
+#     - master
 
 report:
   stage: report
