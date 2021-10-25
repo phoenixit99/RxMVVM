@@ -28,11 +28,12 @@ build_project:
     - master
 
 xcodeTest:
-  tags:
-    - ios
   stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
   script: xcodebuild test -scheme RxMVVM -destination 'platform=iOS Simulator,name=iPhone 6s,OS=12.1'    
-    
+  tags:
+    - master   
 release:
   stage: release
   needs: [build_project]
