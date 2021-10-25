@@ -1,8 +1,8 @@
 stages:
   - build
-  - release
+  # - release
   - test
-  - deploy
+  # - deploy
   - report
   
 variables:
