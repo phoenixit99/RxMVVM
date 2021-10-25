@@ -1,8 +1,8 @@
 stages:
   - build
+  # - release
   - test
-  - release
-  - deploy
+  # - deploy
   - report
   
 variables:
@@ -27,39 +27,41 @@ build_project:
   tags:
     - master
 
+# release:
+#   stage: release
+#   needs: [build_project]
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "schedule"
+#   script:
+#   - bundle exec fastlane release
+#   artifacts:
+#     paths:
+#       - build/RxMVVM.ipa
+#   tags:
+#     - stable
+
 xcodeTest:
   stage: test
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
-  script: xcodebuild test -scheme RxMVVM -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0'
+  script: 
+    - bundle exec fastlane test
   tags:
     - master   
-release:
-  stage: release
-  needs: [build_project]
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule"
-  script:
-  - bundle exec fastlane release
-  artifacts:
-    paths:
-      - build/RxMVVM.ipa
-  tags:
-    - stable
-
-deploy:
-  stage: deploy
-  needs: [release]
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "schedule"
-  script:
-  - bundle exec fastlane deploy mirQa:no
-  tags:
-    - master
+    
+# deploy:
+#   stage: deploy
+#   needs: [release]
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "schedule"
+#   script:
+#   - bundle exec fastlane deploy mirQa:no
+#   tags:
+#     - master
 
 report:
   stage: report
-  needs: [deploy]
+  needs: [xcodeTest]
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
   script:

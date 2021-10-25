@@ -13,6 +13,17 @@ clear_derived_data
 xcclean(workspace:"RxMVVM.xcworkspace",scheme:"RxMVVM")
 end
 
+lane :test do
+  cocoapods
+  clean_build_artifacts
+  scan(
+      workspace:"RxMVVM.xcworkspace",
+      scheme:"RxMVVM",
+      clean: true, # Clean project folder before test execution
+      device: 'iPhone X' # Simulator for testing 
+    )
+end
+
  # ------------ Archive file -------------
 
  private_lane :setVar do |options| 
@@ -20,10 +31,8 @@ end
   end
 
 lane :release do
-  cocoapods
- 
   current_branch = git_branch
-
+  cocoapods
   sh "git pull origin " + current_branch
   # Providing the xcodeproj is optional
   new_build = increment_build_number(xcodeproj: "RxMVVM.xcodeproj")
