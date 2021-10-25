@@ -18,8 +18,7 @@ lane :test do
   scan(
       workspace:"RxMVVM.xcworkspace",
       scheme:"RxMVVM",
-      clean: true, # Clean project folder before test execution
-      device: 'iPhone X' # Simulator for testing 
+      clean: true
     )
 end
 
