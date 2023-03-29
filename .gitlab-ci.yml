@@ -1,0 +1,71 @@
+stages:
+  - build
+  - test
+  - release
+  - deploy
+  - report
+  
+variables:
+  LC_ALL: "en_US.UTF-8"
+  LANG: "en_US.UTF-8"
+  PERSONAL_TOKEN: "sCYyAFR8y4x7oyKDzmWy"
+  CI_PROJECT_PATH: "Nguyen_Hoang99/RxMVVM"
+
+before_script:
+    - git remote set-url origin https://gitlab-ci-token:${PERSONAL_TOKEN}@gitlab.com/$CI_PROJECT_PATH.git
+    - git config --global user.name "Nguyen_Hoang99"
+    - git config --global user.email "hoanguit@gmail.com"
+
+build_project:
+  stage: build
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+    - sudo gem install bundler
+    - bundle install
+    - bundle exec fastlane build
+  tags:
+    - master
+
+xcodeTest:
+  stage: test
+  needs: [build_project]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script: 
+    - bundle exec fastlane test
+  tags:
+    - master   
+    
+release:
+  stage: release
+  needs: [xcodeTest]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+  - bundle exec fastlane release
+  artifacts:
+    paths:
+      - build/RxMVVM.ipa
+  tags:
+    - stable
+
+deploy:
+  stage: deploy
+  needs: [release]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+  - bundle exec fastlane deploy mirQa:no
+  tags:
+    - master
+
+report:
+  stage: report
+  needs: [deploy]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+  - bundle exec fastlane report
+  tags:
+    - master
