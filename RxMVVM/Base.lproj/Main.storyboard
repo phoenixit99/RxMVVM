@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,16 +23,26 @@
                                     <constraint firstAttribute="width" constant="150" id="5iZ-ON-HRP"/>
                                     <constraint firstAttribute="height" constant="50" id="WU1-Km-qc8"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Get Forecast"/>
                                 <connections>
                                     <action selector="callLogiinAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unj-76-spJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-aC-nZE">
+                                <rect key="frame" x="172.5" y="493" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                <connections>
+                                    <action selector="callSearchAutoComplete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSM-4t-43D"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hZZ-aC-nZE" firstAttribute="top" secondItem="U3U-lr-dvX" secondAttribute="bottom" constant="20" id="7bf-C3-jse"/>
                             <constraint firstItem="U3U-lr-dvX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aFa-Oa-50X"/>
+                            <constraint firstItem="hZZ-aC-nZE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hFP-I8-vep"/>
                             <constraint firstItem="U3U-lr-dvX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nh3-dn-sDI"/>
                         </constraints>
                     </view>

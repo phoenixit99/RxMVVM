@@ -6,18 +6,20 @@
 //
 
 import UIKit
-import AppCenter
-import AppCenterAnalytics
-import AppCenterCrashes
+//import AppCenter
+//import AppCenterAnalytics
+//import AppCenterCrashes
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        AppCenter.start(withAppSecret: "921f3f91-8ab9-45c9-96c4-de46387270e8", services:[
-          Analytics.self,
-          Crashes.self
-        ])
+//        AppCenter.start(withAppSecret: "921f3f91-8ab9-45c9-96c4-de46387270e8", services:[
+//          Analytics.self,
+//          Crashes.self
+//        ])
+//        NetworkLogger.registerClass(URLProtocol.self)
+        URLProtocol.registerClass(NetworkLogger.self)
         return true
     }
 

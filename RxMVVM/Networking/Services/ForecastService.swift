@@ -11,13 +11,19 @@ enum NetworkService: NetworkProvider {
     static var environment: Environment = .production
 }
 
-extension NetworkService : ForecaseProtocol {
+extension NetworkService : ForecastProtocol {
     
-    static func getForecaseWeather(_ search: String,
-                                   day: Int,
-                                   completion: @escaping (Result<ForecaseWeather,Error>)->Void ) {
+    static func searchWeatherByCity(_ cityName: String, completion: @escaping (Result<[LocationModel], Error>) -> Void) {
         
-        let forestRequest =  ForecastRequest.forecastWeather(search: search, day: day)
+        let forestRequest =  ForecastRequest.searchByCity(search: cityName)
         requestUrl(networkRequest: forestRequest.urlRequest, completion: completion)
+    }
+    
+    static func getForecastWeather(_ search: String,
+                                   day: Int,
+                                   completion: @escaping (Result<ForecastWeather,Error>)->Void ) {
+        
+        let forecastRequest =  ForecastRequest.forecastWeather(search: search, day: day)
+        requestUrl(networkRequest: forecastRequest.urlRequest, completion: completion)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ForecaseWeather.swift
+//  ForecastWeather.swift
 //  RxMVVM
 //
 //  Created by Nguyen Hoang on 18/09/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct ForecaseWeather: Codable {
+public struct ForecastWeather: Codable {
 
     public let location:LocationModel?
     public let currentWeather:WeatherModel?

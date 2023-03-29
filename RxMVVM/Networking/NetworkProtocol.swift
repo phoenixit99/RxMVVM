@@ -21,6 +21,7 @@ enum Task {
 enum HeaderConfig: String {
     case rapidapHost = "weatherapi-com.p.rapidapi.com"
     case rapidapKey = "4c4983caccmshda7dfa29eca9e41p1fc96fjsn1756d02696fe"
+    case key = "dfb4a84a3a8a4e4b96150039221009"
 }
 
 protocol NetworkProtocol {
@@ -36,8 +37,7 @@ protocol NetworkProtocol {
 extension NetworkProtocol {
     
     var headers: [String:String] {
-        return ["x-rapidapi-host":HeaderConfig.rapidapHost.rawValue,
-                "x-rapidapi-key":HeaderConfig.rapidapKey.rawValue]
+        return [:]
     }
     
     var requestData: Data {
@@ -63,7 +63,7 @@ extension NetworkProtocol {
     
     var urlRequest: URLRequest {
         
-        guard let url = URL(string: baseUrl + path) else { preconditionFailure("Invalid URL used to create URL instance") }
+        guard let url = URL(string: baseUrl + "\(path)&key=\(HeaderConfig.key.rawValue)") else { preconditionFailure("Invalid URL used to create URL instance") }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = headers

@@ -8,7 +8,8 @@
 import UIKit
 
 enum ForecastRequest {
-    
+   
+    case searchByCity(search: String)
     case forecastWeather(search: String, day: Int)
     case logout
 }
@@ -22,6 +23,8 @@ extension ForecastRequest: NetworkProtocol {
         switch self {
         case .forecastWeather(let search,let day):
             return "/forecast.json?q=\(search)&day=\(day)"
+        case .searchByCity(let search):
+            return "/search.json?q=\(search)"
         default:
             return ""
         }
@@ -49,6 +52,8 @@ extension ForecastRequest: NetworkProtocol {
     
         switch self {
         case .forecastWeather:
+            return [:]
+        case .searchByCity:
             return [:]
         default:
             return [:]

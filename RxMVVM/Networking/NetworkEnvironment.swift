@@ -9,7 +9,7 @@ import Foundation
 
 enum Environment {
     case production
-    case statging
+    case staging
     case qa
 }
 enum ApiUrl {
@@ -17,11 +17,11 @@ enum ApiUrl {
     static var baseUrl:String {
         switch NetworkService.environment {
         case .production:
-            return "https://weatherapi-com.p.rapidapi.com"
-        case .statging:
-            return "https://weatherapi-com.p.rapidapi.com"
+            return "http://api.weatherapi.com/v1"
+        case .staging:
+            return "http://api.weatherapi.com/v1"
         case .qa:
-            return "https://weatherapi-com.p.rapidapi.com"
+            return "http://api.weatherapi.com/v1"
         }
     }
 }

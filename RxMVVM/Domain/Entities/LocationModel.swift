@@ -17,6 +17,7 @@ public struct LocationModel: Codable {
     public let tz_id: String?
     public let localtime: String?
     public let localtime_epoch: Int?
+    public let url: String?
     
     private enum CodingKeys: String, CodingKey {
         case name
@@ -27,19 +28,21 @@ public struct LocationModel: Codable {
         case tz_id
         case localtime
         case localtime_epoch
+        case url
     }
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        name = try container.decodeIfPresent(String.self, forKey: .name)
-        region = try container.decodeIfPresent(String.self, forKey: .region)
-        country = try container.decodeIfPresent(String.self, forKey: .country)
-        lat = try container.decodeIfPresent(Double.self, forKey: .lat)
-        lon = try container.decodeIfPresent(Double.self, forKey: .lon)
-        tz_id = try container.decodeIfPresent(String.self, forKey: .tz_id)
-        localtime = try container.decodeIfPresent(String.self, forKey: .localtime)
-        localtime_epoch = try container.decodeIfPresent(Int.self, forKey: .localtime_epoch)
+        name = try? container.decodeIfPresent(String.self, forKey: .name)
+        region = try? container.decodeIfPresent(String.self, forKey: .region)
+        country = try? container.decodeIfPresent(String.self, forKey: .country)
+        lat = try? container.decodeIfPresent(Double.self, forKey: .lat)
+        lon = try? container.decodeIfPresent(Double.self, forKey: .lon)
+        tz_id = try? container.decodeIfPresent(String.self, forKey: .tz_id)
+        localtime = try? container.decodeIfPresent(String.self, forKey: .localtime)
+        localtime_epoch = try? container.decodeIfPresent(Int.self, forKey: .localtime_epoch)
+        url = try? container.decodeIfPresent(String.self, forKey: .url)
 
     }
 }
