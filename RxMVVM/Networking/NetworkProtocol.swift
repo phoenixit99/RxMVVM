@@ -20,8 +20,8 @@ enum Task {
 }
 enum HeaderConfig: String {
     case rapidapHost = "weatherapi-com.p.rapidapi.com"
-    case rapidapKey = "4c4983caccmshda7dfa29eca9e41p1fc96fjsn1756d02696fe"
-    case key = "dfb4a84a3a8a4e4b96150039221009"
+    case rapidapKey = "${rapidapKey}"
+    case key = "key"
 }
 
 protocol NetworkProtocol {
