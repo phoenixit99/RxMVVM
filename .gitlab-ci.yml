@@ -8,7 +8,7 @@ stages:
 variables:
   LC_ALL: "en_US.UTF-8"
   LANG: "en_US.UTF-8"
-  PERSONAL_TOKEN: "sCYyAFR8y4x7oyKDzmWy"
+  PERSONAL_TOKEN: "${PERSONAL_TOKEN}"
   CI_PROJECT_PATH: "Nguyen_Hoang99/RxMVVM"
 
 before_script:
