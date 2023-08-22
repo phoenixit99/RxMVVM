@@ -10,6 +10,7 @@ import Foundation
 protocol NetworkProvider {
     static func requestUrl<T:Decodable>(networkRequest: URLRequest,completion: @escaping (Result<T,Error>) -> Void)
 }
+// do some thing
 
 extension NetworkProvider {
     
